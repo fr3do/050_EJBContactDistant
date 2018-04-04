@@ -4,7 +4,7 @@ import daoJdbcMapping.ContactDAO;
 import java.sql.SQLException;
 import javax.annotation.PostConstruct;
 import javax.ejb.Stateless;
-import metierMapping.*;
+import metierMapping.Contact;
 import utilitairesMG.jdbc.AccesBase;
 import utilitairesMG.jdbc.BaseDeDonnees;
 
@@ -50,7 +50,7 @@ public class ContactDistant implements ContactDistantRemote
         {
             contact = new Contact();
             contact.setNumero(numeroContact);
-            contactDAO.lire(contact);
+            contactDAO.lireContact(contact);
         }
         finally
         {
